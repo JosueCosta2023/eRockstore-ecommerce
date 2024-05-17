@@ -1,17 +1,16 @@
+import { AboutMe } from "../../components/aboutMe";
+import { NavBar } from "../../components/navbar/NavBar";
 import "./about.css";
 import React from "react";
-import { NavBar } from "../../components/navbar/NavBar";
+
 
 export const About = () => {
   return (
     <>
-      <header className="header-container container">
-        <NavBar />
-      </header>
+      <NavBar/>
       <main>
-        <h2>Welcome to page About</h2>
+        <AboutMe/>
       </main>
-      <footer></footer>
     </>
   );
 };

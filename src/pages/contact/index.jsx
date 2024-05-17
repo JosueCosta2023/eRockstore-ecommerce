@@ -1,17 +1,15 @@
+import { ContactForm } from "../../components/contactForm";
+import { NavBar } from "../../components/navbar/NavBar";
 import "./contact.css";
 import React from "react";
-import { NavBar } from "../../components/navbar/NavBar";
 
 export const Contact = () => {
   return (
     <>
-      <header className="header-container container">
-        <NavBar />
-      </header>
+      <NavBar/>
       <main>
-        <h2>Welcome to page Contact</h2>
+        <ContactForm/>
       </main>
-      <footer></footer>
     </>
   );
 };

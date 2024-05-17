@@ -1,6 +1,6 @@
 .hero-container{
     width: 100%;
-    background-color: var(--dark-primary-color);
+    background-color: var(--primary-color);
 }
 .inner-container{
     max-width: 1600px;
