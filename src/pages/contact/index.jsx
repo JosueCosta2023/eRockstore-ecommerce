@@ -1,15 +1,15 @@
-import "./products.css";
+import "./contact.css";
 import React from "react";
 import { NavBar } from "../../components/navbar/NavBar";
 
-export const Products = () => {
+export const Contact = () => {
   return (
     <>
-      <header className="header-container">
+      <header className="header-container container">
         <NavBar />
       </header>
       <main>
-        <h2>Welcome to page Projects</h2>
+        <h2>Welcome to page Contact</h2>
       </main>
       <footer></footer>
     </>

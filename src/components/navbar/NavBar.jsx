@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaBars, FaSearch, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 
 export const NavBar = () => {
+
+  const [show, setShow] = useState(false)
+
   return (
-    <>
+    <div className="nav-container">
       <div className="inner-content">
         <h1 className="logo">
           Rocket<span>Store</span>
         </h1>
 
-        <nav>
+        <nav className={`${show && "show"}`}>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -37,11 +40,11 @@ export const NavBar = () => {
               <FaShoppingCart/>
               <div className="products-count">0</div>
             </button>
-            <button className="menu-button">
+            <button className="menu-button" onClick={() => setShow(!show)}>
               <FaBars/>
             </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };

@@ -5,7 +5,7 @@ import { NavBar } from "../../components/navbar/NavBar";
 export const About = () => {
   return (
     <>
-      <header className="header-container">
+      <header className="header-container container">
         <NavBar />
       </header>
       <main>
