@@ -7,9 +7,7 @@ export const Contact = () => {
   return (
     <>
       <NavBar/>
-      <main>
-        <ContactForm/>
-      </main>
+      <ContactForm />
     </>
   );
 };
