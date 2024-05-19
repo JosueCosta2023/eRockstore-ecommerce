@@ -1,0 +1,106 @@
+footer{
+    background-color: var(--secondary-color);
+    color: white;
+    width: 100%;
+}
+
+footer > .content-base,
+footer > .content{
+    max-width: 1280px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer > .content{
+    padding: 4rem 1rem;
+    padding-bottom: 0;
+    gap: 2rem;
+}
+footer > .content-base{
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+    gap: 2rem;
+}
+
+.download-options{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.download-options > p:first-child{
+    font-weight: bold;
+}
+
+.download-options > div{
+    display: flex;
+    gap: 1rem;
+}
+
+.download-options > div > img{
+    max-width: 150px;
+}
+
+.logo-footer{
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 380px;
+}
+
+.logo{
+    color: var(--primary-color);
+}
+
+.logo > span{
+    color: white;
+}
+
+.logo-footer > p{
+    margin-top: 1rem;
+}
+
+footer > .content > .links{
+    margin-bottom: 0.8rem;
+}
+
+footer > .content >.links  ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.3rem;
+}
+
+footer > .content >.links  ul li{
+
+}
+
+footer > .content >.links  ul li:hover{
+    text-decoration: underline;
+}
+
+@media(max-width: 1024px ){
+    footer > .content > .links{
+        text-align: center;
+    }
+}
+
+@media(max-width: 425px ){
+    .download-options > div > img{
+        max-width: 40%;
+        justify-content: center;
+    }
+    .download-options > div{
+        justify-content: center;
+    }
+
+    .download-options{
+        text-align: center;
+    }
+}
+
+

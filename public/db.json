@@ -5,7 +5,8 @@
       "name": "Combo Gamer Meetion",
       "image": "./images/products/product-1.png",
       "rating": 4,
-      "price": 4000
+      "price": 4000,
+      "description":""
     },
     {
       "id": 2,

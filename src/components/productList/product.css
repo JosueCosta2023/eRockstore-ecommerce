@@ -96,3 +96,17 @@
 .add-to-cart-btn:hover{
     background-color: var(--dark-secondary-color);
 }
+
+@media(max-width: 800px){
+    .section-title > h3{
+        font-size: 1.2rem;
+    }
+
+    .product  .name,
+    .product  .price,
+    .product  .rate{
+        max-height: 1rem;
+        overflow: hidden;
+        font-size: 0.8rem;
+    }
+}
