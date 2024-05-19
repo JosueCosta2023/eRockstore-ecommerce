@@ -5,6 +5,7 @@ import { About } from "./pages/about"
 import { Contact } from "./pages/contact"
 import { CheckOut } from "./components/checkout"
 import { ProductDetails } from "./components/productDetails"
+import { Roles } from "./components/roles"
 
 
 
@@ -18,6 +19,8 @@ export const AppRouter = () => {
                 <Route path="/products/:id/details" Component={ProductDetails}/>
                 <Route path="/about" Component={About}/>
                 <Route path="/contact" Component={Contact}/>
+                <Route path="/roles" Component={Roles}/>
+
             </Routes>
         </BrowserRouter>
     )

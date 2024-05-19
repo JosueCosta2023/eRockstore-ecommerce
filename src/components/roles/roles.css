@@ -1,0 +1,78 @@
+.roles-container{
+    width: 1280px;
+    max-width: 100%;
+    margin-inline: auto;
+    padding: 4rem 3rem;
+}
+
+.underline{
+    width: 30%;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.roles-container > h2{
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.roles-container > h3{
+    font-size: 1.2rem;
+    text-align: left;
+    margin-top: 50px;
+
+}
+
+.roles-container .itens-roles{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 20px;
+}
+.roles-container .itens-roles .item{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.roles-container .itens-roles .item > li{
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.roles-container .itens-roles .item ul {
+    padding-left: 20px;
+    list-style: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+
+
+.roles-container > a{
+    background-color: var(--primary-color);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+    display: flex;
+    max-width: 250px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.roles-container > a:hover{
+    background-color: var(--dark-primary-color);
+    max-width: 270px;
+}
+
+@media(max-width: 768px){
+    .roles-container > h2, .roles-container > h3{
+        text-align: center;
+    }
+    
+}

@@ -33,8 +33,7 @@ export const Footer = () => {
                     <ul>
                         <li><Link to="/">Cupons</Link></li>
                         <li><Link to="/">Blogs</Link></li>
-                        <li><Link to="/">Parceiros</Link></li>
-                        <li><Link to="/">Torne-se um parceiro</Link></li>
+                        <li><Link to="/roles">Tone-se Parceiro</Link></li>
                         <li><Link to="/">Politicas e privacidade</Link></li>
                     </ul>
                 </div>

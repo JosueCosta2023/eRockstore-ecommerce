@@ -45,17 +45,17 @@ footer > .content-base{
     max-width: 150px;
 }
 
-.logo-footer{
+footer > .content > .logo-footer{
     text-align: center;
     text-transform: uppercase;
     max-width: 380px;
 }
 
-.logo{
+footer > .content > .logo-footer > .logo{
     color: var(--primary-color);
 }
 
-.logo > span{
+footer > .content > .logo-footer > .logo > span{
     color: white;
 }
 

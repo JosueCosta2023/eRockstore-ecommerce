@@ -8,8 +8,8 @@ import { Footer } from '../../components/footer'
 export const Home = () => {
     return (
         <>
+            <NavBar />
             <header className="header-container">
-                <NavBar />
                 <Hero />
             </header>
             <main>
@@ -44,7 +44,7 @@ export const Home = () => {
                     </div>
                 </div>
             </main>
-            <Footer/>
+            <Footer />
         </>
     )
 }

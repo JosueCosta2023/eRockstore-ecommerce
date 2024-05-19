@@ -1,11 +1,9 @@
-
+import {PageNotFound} from '../pageNotfound' 
 
 export const ContactForm = () => {
     return(
         <>
-            <h2>
-                This is Form
-            </h2>
+            <PageNotFound/>
         </>
     )
 }
