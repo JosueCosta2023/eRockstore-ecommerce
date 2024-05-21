@@ -9,10 +9,9 @@
     background-color: white;
     padding: 2rem;
     box-shadow: 5px 5px 50px var(--dark-color);
-    overflow-y: hidden;
-    scrollbar-width: none;
+    scrollbar-width: auto;
     flex-direction: column;
-
+    overflow-y: auto;
 }
 
 .sidebar-cart::-webkit-scrollbar{

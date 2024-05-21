@@ -1,9 +1,12 @@
 import { AppRouter } from './Routers'
+import { CartContext, CartProvider } from './context/cartContext'
 import './index.css'
 
 function App() {
   return (
-    <AppRouter/>
+    <CartProvider>
+      <AppRouter/>
+    </CartProvider>
   )
 }
 

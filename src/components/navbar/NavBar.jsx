@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaBars, FaSearch, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import { SideBarCart } from "../sideBar";
+import { CartContext } from "../../context/cartContext";
 
 export const NavBar = () => {
 
   const [show, setShow] = useState(false)
   const [showCart, setShowCart] = useState(false)
+  const {cartItems} = useContext(CartContext)
 
   return (
     <div className="nav-container">
@@ -41,7 +43,9 @@ export const NavBar = () => {
             <button className="shopping-cart" 
             onClick={() => setShowCart(!showCart)}>
               <FaShoppingCart/>
-              <div className="products-count">0</div>
+              <div className="products-count">
+                {cartItems.length}
+              </div>
             </button>
             <button className="menu-button" 
             onClick={() => setShow(!show)}>

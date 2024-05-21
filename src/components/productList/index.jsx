@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { FaMoneyBill } from "react-icons/fa"
 import { FaCartShopping } from "react-icons/fa6"
 import { Link } from "react-router-dom"
 import './product.css'
-import { addProductToCart } from "../../service/services"
+import { CartContext } from "../../context/cartContext"
 
 
 
@@ -11,6 +11,7 @@ export const ProductList = () => {
 
     const [products, setProducts] = useState([])
 
+    const {addToCart} = useContext(CartContext)
 
     useEffect(() => {
         try {
@@ -45,12 +46,12 @@ export const ProductList = () => {
                         <div className="buttons">
                             <button className="btn-icon">
                                 <Link to={`/products/${product.id}/checkout`}>
-                                    <span>Comprar Agora</span>
+                                    <span>Enviar Pedido</span>
                                     <FaMoneyBill />
                                 </Link>
                             </button>
 
-                            <button className="btn-icon add-to-cart-btn" onClick={() => addProductToCart(product)}>
+                            <button className="btn-icon add-to-cart-btn" onClick={() => addToCart(product)}>
                                 <span>Adicionar ao Carrinho</span>
                                 <FaCartShopping />
                             </button>
