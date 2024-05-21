@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { FaBars, FaSearch, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./navbar.css";
+import { SideBarCart } from "../sideBar";
 
 export const NavBar = () => {
 
   const [show, setShow] = useState(false)
+  const [showCart, setShowCart] = useState(false)
 
   return (
     <div className="nav-container">
@@ -36,14 +38,19 @@ export const NavBar = () => {
               <input type="search" placeholder="Procurar" />
               <FaSearch />
             </div>
-            <button className="shopping-cart">
+            <button className="shopping-cart" 
+            onClick={() => setShowCart(!showCart)}>
               <FaShoppingCart/>
               <div className="products-count">0</div>
             </button>
-            <button className="menu-button" onClick={() => setShow(!show)}>
+            <button className="menu-button" 
+            onClick={() => setShow(!show)}>
               <FaBars/>
             </button>
         </div>
+      </div>
+      <div className={`sideBar ${showCart && "showCart"}`}>
+        <SideBarCart setShowCart={setShowCart} />
       </div>
     </div>
   );

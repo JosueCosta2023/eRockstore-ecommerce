@@ -1,0 +1,40 @@
+.sidebar-cart{
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 5px 5px 50px var(--dark-color);
+    overflow-y: hidden;
+    scrollbar-width: none;
+    flex-direction: column;
+
+}
+
+.sidebar-cart::-webkit-scrollbar{
+    display: none;
+}
+
+.sidebar-cart .top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.sidebar-cart .top button{
+    background-color: var(--dark-color);
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius:50% ;
+}
+
+.sidebar-cart .total-container{
+    margin-block: 1rem;
+}
+
+

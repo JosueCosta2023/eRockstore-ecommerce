@@ -133,3 +133,11 @@ nav.show{
         display: none;
     }
 }
+
+.nav-container .sideBar{
+    display: none;
+}
+
+.nav-container .sideBar.showCart{
+    display: block;
+}

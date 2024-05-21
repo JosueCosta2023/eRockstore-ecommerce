@@ -3,15 +3,18 @@ import { FaMoneyBill } from "react-icons/fa"
 import { FaCartShopping } from "react-icons/fa6"
 import { Link } from "react-router-dom"
 import './product.css'
+import { addProductToCart } from "../../service/services"
+
 
 
 export const ProductList = () => {
 
     const [products, setProducts] = useState([])
 
+
     useEffect(() => {
         try {
-            fetch('/public/db.json')
+            fetch('/db.json')
                 .then((res) => res.json())
                 .then(data => setProducts(data.products))
 
@@ -21,11 +24,12 @@ export const ProductList = () => {
 
     }, [])
 
-    // console.log(products)
+
+
     return (
         <div className="page-inner-content">
             <div className="section-title">
-                <h2>Produtos Selecionados</h2>
+                <h2>Nossos Produtos</h2>
                 <div className="underline"></div>
             </div>
 
@@ -46,7 +50,7 @@ export const ProductList = () => {
                                 </Link>
                             </button>
 
-                            <button className="btn-icon add-to-cart-btn">
+                            <button className="btn-icon add-to-cart-btn" onClick={() => addProductToCart(product)}>
                                 <span>Adicionar ao Carrinho</span>
                                 <FaCartShopping />
                             </button>

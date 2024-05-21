@@ -9,7 +9,7 @@ import { Roles } from "./components/roles"
 
 
 
-export const AppRouter = () => {
+export const AppRouter = ({addProductToCart}) => {
     return(
         <BrowserRouter>
             <Routes>
@@ -20,7 +20,6 @@ export const AppRouter = () => {
                 <Route path="/about" Component={About}/>
                 <Route path="/contact" Component={Contact}/>
                 <Route path="/roles" Component={Roles}/>
-
             </Routes>
         </BrowserRouter>
     )

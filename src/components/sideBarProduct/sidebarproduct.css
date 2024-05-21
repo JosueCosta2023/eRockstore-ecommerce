@@ -1,0 +1,43 @@
+.sidebar-product{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--light-color);
+    justify-content: space-between;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.sidebar-product .right-side img{
+    width: 75px;
+}
+
+.sidebar-product .left-side{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.sidebar-product .left-side button{
+    background-color: var(--dark-color);
+    color: white;
+    width: 1rem;
+    height: 1rem;
+    border-radius:50% ;
+}
+
+.sidebar-product .left-side .details{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-product .left-side .details p{
+    font-size: 0.8rem;
+}
+
+.sidebar-product .left-side .details input{
+    width: 55px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    padding: 0.2rem;
+    color: black;
+}
+
