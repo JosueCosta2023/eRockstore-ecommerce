@@ -1,4 +1,4 @@
-import { PageNotFound } from "../pageNotfound"
+import { PageNotFound } from "../pageMessages"
 
 
 export const AboutMe = () => {

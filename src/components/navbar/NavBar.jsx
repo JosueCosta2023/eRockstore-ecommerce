@@ -3,13 +3,15 @@ import { FaBars, FaSearch, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import { SideBarCart } from "../sideBar";
-import { CartContext } from "../../context/cartContext";
+import { ProductContext } from "../../context/productContext";
+
 
 export const NavBar = () => {
 
   const [show, setShow] = useState(false)
   const [showCart, setShowCart] = useState(false)
-  const {cartItems} = useContext(CartContext)
+  const {cart} = useContext(ProductContext)
+  
 
   return (
     <div className="nav-container">
@@ -44,7 +46,7 @@ export const NavBar = () => {
             onClick={() => setShowCart(!showCart)}>
               <FaShoppingCart/>
               <div className="products-count">
-                {cartItems.length}
+                {cart.length}
               </div>
             </button>
             <button className="menu-button" 

@@ -1,18 +1,21 @@
 import { FaXmark } from "react-icons/fa6"
 import './sidebarproduct.css'
-import { CartContext } from "../../context/cartContext"
+import { ProductContext } from "../../context/productContext"
 import { useContext } from "react"
-
-
 
 export const SideBarProducts = () => {
 
-    const {cartItems, formatCurrency, removeFromCart} = useContext(CartContext)
+    const { cart, removeFromCart, formatCurrency} = useContext(ProductContext)
 
+
+    const handleInput = (id) => {
+        
+    }
+    
     return(
         <>
         {
-            cartItems.map((product) => (
+            cart.map((product) => (
                 <div className="sidebar-product" key={product.id}>
                     <div className="left-side">
                         <button className="remove-product-btn" onClick={() => removeFromCart(product.id)}><FaXmark/></button>
@@ -23,12 +26,11 @@ export const SideBarProducts = () => {
                                 type="number" 
                                 min={1} 
                                 max={100}
-                                value={product.length}
-                                
+                                value={product.quantity}
+                                onChange={(e) => {
+                                    handleInput(product.id)
+                                }}
                             />
-                            <p className="price-some">
-                                <b>Soma: </b>{formatCurrency(product.price)}
-                            </p>
                         </div>
                     </div>
 

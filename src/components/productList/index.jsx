@@ -1,30 +1,16 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import { FaMoneyBill } from "react-icons/fa"
 import { FaCartShopping } from "react-icons/fa6"
 import { Link } from "react-router-dom"
 import './product.css'
-import { CartContext } from "../../context/cartContext"
+import { ProductContext } from "../../context/productContext"
+
 
 
 
 export const ProductList = () => {
 
-    const [products, setProducts] = useState([])
-
-    const {addToCart} = useContext(CartContext)
-
-    useEffect(() => {
-        try {
-            fetch('/db.json')
-                .then((res) => res.json())
-                .then(data => setProducts(data.products))
-
-        } catch (error) {
-            console.error("Erro ao buscar dados json", error)
-        }
-
-    }, [])
-
+    const {products,  addToCart, cart} = useContext(ProductContext)
 
 
     return (
@@ -44,12 +30,15 @@ export const ProductList = () => {
                         <p className="price"><span>R$:</span> {product.price}  </p>
 
                         <div className="buttons">
-                            <button className="btn-icon">
-                                <Link to={`/products/${product.id}/checkout`}>
-                                    <span>Enviar Pedido</span>
-                                    <FaMoneyBill />
-                                </Link>
-                            </button>
+                            { cart.length === 0 ? <></> : 
+                                <button className="btn-icon">
+                                    <Link to={`/products/checkout`}>
+                                        <span>Enviar Pedido</span>
+                                        <FaMoneyBill />
+                                    </Link>
+                                </button>
+                        
+                            }
 
                             <button className="btn-icon add-to-cart-btn" onClick={() => addToCart(product)}>
                                 <span>Adicionar ao Carrinho</span>

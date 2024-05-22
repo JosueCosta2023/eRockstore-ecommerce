@@ -1,13 +1,63 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Footer } from "../footer";
-import { PageNotFound } from "../pageNotfound";
+import { EmptyCart } from "../pageMessages";
+import { ProductContext } from "../../context/productContext";
+import { FaXmark } from "react-icons/fa6";
+import './checkout.css'
+import {NavBar} from '../navbar/NavBar'
+ 
+export const CheckOut = () => {
 
-export const CheckOut = ({id}) => {
+    const { cart, valueCart, removeFromCart, formatCurrency } = useContext(ProductContext)
 
-    return(
-        <p>
-            <PageNotFound/>
-            <Footer/>
-        </p>
+    return (
+        <>  
+            <NavBar/>
+
+            <section className="page-inner-container">
+                <div className="content">
+                    {cart.length === 0 ? <EmptyCart /> :
+                        <div>
+                            {
+                                cart.map((product) => (
+                                    <div className="sidebar-product" key={product.id}>
+                                        <div className="left-side">
+                                            
+                                            <button className="remove-product-btn" onClick={() => removeFromCart(product.id)}><FaXmark /></button>
+
+
+                                            <div className="details">
+                                                <h4>{product.name}</h4>
+                                                <p>{formatCurrency(product.price)}</p>
+                                                <input
+                                                    type="number"
+                                                    min={1}
+                                                    max={100}
+                                                    value={product.quantity}
+
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div className="right-side">
+                                            <img src={product.image} alt="controle de plastation 5" />
+                                        </div>
+                                    </div>
+
+                                ))
+                            }
+
+                            <p>Valor total: {formatCurrency(valueCart)}</p>
+                            <div className="content-buttons">
+                                <button>Enviar no Whatsapp</button>
+                                <button>Enviar no E-mail</button>
+                                <button>Desistir da compra</button>
+                            </div>
+                        </div> }
+                </div>
+            </section>
+
+            <Footer />
+        </>
     )
 }

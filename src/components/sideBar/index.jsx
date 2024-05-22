@@ -3,37 +3,36 @@ import './sidebar.css'
 import { Link } from "react-router-dom"
 import { SideBarProducts } from "../sideBarProduct"
 import { useContext } from "react"
-import { CartContext } from "../../context/cartContext"
+import { ProductContext } from "../../context/productContext"
 
 
 
 export const SideBarCart = ({ setShowCart }) => {
 
-    const { cartItems } = useContext(CartContext)
-
+    const {  cart, valueCart } = useContext(ProductContext)
 
     return (
 
         <aside className="sidebar-cart">
             <div className="top">
-                <h3>Seu Carrinho</h3>
+                <h3>Meu Carrinho</h3>
                 <button onClick={() => setShowCart(false)}>
                     <FaXmark />
                 </button>
             </div>
 
             {
-                cartItems.length === 0 ? <i>Seu carrinho está vazio.</i> : 
+                cart.length === 0 ? <i>Seu carrinho está vazio.</i> : 
                 <>
                     <div className="sidebar-products-list">
                         <SideBarProducts/>
                     </div>
 
                     <div className="total-container">
-                        <b>Total:</b> R$: 000
+                        <b>Total:</b> R$: {valueCart}
                     </div>
 
-                    <Link to="/products/:id/checkout" className="btn-icon">
+                    <Link to="/products/checkout" className="btn-icon">
                         <span>Enviar Pedido</span>
                         <FaMoneyBill/>
                     </Link>

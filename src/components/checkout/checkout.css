@@ -1,0 +1,38 @@
+.page-inner-container{
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--light-color);
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-inline:auto;
+    margin: 20px auto;
+    box-shadow: 10px 50px 80px var(--light-color);
+}
+
+.page-inner-container > .content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page-inner-container > .content > div > p {
+    text-align: left;
+    font-size: 2rem;
+    margin-block: 40px;
+    font-weight: bold;
+}
+
+.page-inner-container > .content > div > .content-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.page-inner-container > .content > div > .content-buttons > button{
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+}

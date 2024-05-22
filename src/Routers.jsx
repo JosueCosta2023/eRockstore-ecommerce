@@ -9,13 +9,15 @@ import { Roles } from "./components/roles"
 
 
 
-export const AppRouter = ({addProductToCart}) => {
+export const AppRouter = () => {
+
+
     return(
         <BrowserRouter>
             <Routes>           
                     <Route path="/" Component={Home}/>
                     <Route path="/products" Component={Products}/>
-                    <Route path="/products/:id/checkout" Component={CheckOut}/>
+                    <Route path="/products/checkout" Component={CheckOut}/>
                     <Route path="/products/:id/details" Component={ProductDetails}/>
                     <Route path="/about" Component={About}/>
                     <Route path="/contact" Component={Contact}/>
