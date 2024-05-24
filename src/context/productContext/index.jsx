@@ -81,7 +81,7 @@ export const ProductProvider = ({children}) => {
    }
 
     const formatCurrency = (price) => {
-      return new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(price)
+      return new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(price.toFixed(2))
     }
 
     const updateQuantity = (productId, quantity) => {
