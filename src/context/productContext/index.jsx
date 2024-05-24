@@ -57,8 +57,11 @@ export const ProductProvider = ({children}) => {
 
     const addToCart = (product) => {
         setCart([...cart, {...product, quantity: 1}])
-        const total = cart.reduce((total, product) => total + product.price * product.quantity, 0)
-        setValueCart(total)
+    }
+
+
+    const getCartSubTotal = () => {
+      return cart.reduce((total, product) => total + product.price * product.quantity, 0)
     }
 
     const removeFromCart = (productId) => {
@@ -69,13 +72,27 @@ export const ProductProvider = ({children}) => {
       alert("Compra Finalizada")
       setCart([])
     }
+
+    const handleInput = (productId, quantity) => {
+      if(quantity < 1){
+       quantity = 1;
+      }
+      updateQuantity(productId, parseInt(quantity, 10))
+   }
+
     const formatCurrency = (price) => {
       return new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(price)
     }
 
+    const updateQuantity = (productId, quantity) => {
+      setCart(cart.map(item => 
+        item.id === productId ? { ...item, quantity} : item
+      ))
+    }
+
 
     return(
-        <ProductContext.Provider value={{products, cart, valueCart, addToCart, removeFromCart, handleCheckout, formatCurrency}}>
+        <ProductContext.Provider value={{products, cart, valueCart, addToCart, removeFromCart, handleCheckout, formatCurrency, updateQuantity, getCartSubTotal, handleInput}}>
             {children}
         </ProductContext.Provider>
     )

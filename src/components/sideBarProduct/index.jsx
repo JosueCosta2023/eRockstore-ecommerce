@@ -5,13 +5,8 @@ import { useContext } from "react"
 
 export const SideBarProducts = () => {
 
-    const { cart, removeFromCart, formatCurrency} = useContext(ProductContext)
+    const { cart, removeFromCart, formatCurrency, handleInput} = useContext(ProductContext)
 
-
-    const handleInput = (id) => {
-        
-    }
-    
     return(
         <>
         {
@@ -27,9 +22,7 @@ export const SideBarProducts = () => {
                                 min={1} 
                                 max={100}
                                 value={product.quantity}
-                                onChange={(e) => {
-                                    handleInput(product.id)
-                                }}
+                                onChange={(e) => handleInput(product.id, e.target.value)}
                             />
                         </div>
                     </div>

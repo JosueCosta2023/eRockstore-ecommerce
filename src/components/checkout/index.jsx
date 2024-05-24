@@ -4,15 +4,15 @@ import { EmptyCart } from "../pageMessages";
 import { ProductContext } from "../../context/productContext";
 import { FaXmark } from "react-icons/fa6";
 import './checkout.css'
-import {NavBar} from '../navbar/NavBar'
- 
+import { NavBar } from '../navbar/NavBar'
+
 export const CheckOut = () => {
 
-    const { cart, valueCart, removeFromCart, formatCurrency } = useContext(ProductContext)
+    const { cart, removeFromCart, formatCurrency, handleInput, getCartSubTotal } = useContext(ProductContext)
 
     return (
-        <>  
-            <NavBar/>
+        <>
+            <NavBar />
 
             <section className="page-inner-container">
                 <div className="content">
@@ -22,7 +22,7 @@ export const CheckOut = () => {
                                 cart.map((product) => (
                                     <div className="sidebar-product" key={product.id}>
                                         <div className="left-side">
-                                            
+
                                             <button className="remove-product-btn" onClick={() => removeFromCart(product.id)}><FaXmark /></button>
 
 
@@ -34,7 +34,7 @@ export const CheckOut = () => {
                                                     min={1}
                                                     max={100}
                                                     value={product.quantity}
-
+                                                    onChange={(e) => handleInput(product.id, e.target.value)}
                                                 />
                                             </div>
                                         </div>
@@ -47,13 +47,13 @@ export const CheckOut = () => {
                                 ))
                             }
 
-                            <p>Valor total: {formatCurrency(valueCart)}</p>
+                            <p>Valor total: {formatCurrency(getCartSubTotal())}</p>
                             <div className="content-buttons">
                                 <button>Enviar no Whatsapp</button>
                                 <button>Enviar no E-mail</button>
                                 <button>Desistir da compra</button>
                             </div>
-                        </div> }
+                        </div>}
                 </div>
             </section>
 

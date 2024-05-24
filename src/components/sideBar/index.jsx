@@ -9,7 +9,7 @@ import { ProductContext } from "../../context/productContext"
 
 export const SideBarCart = ({ setShowCart }) => {
 
-    const {  cart, valueCart } = useContext(ProductContext)
+    const {  cart, getCartSubTotal } = useContext(ProductContext)
 
     return (
 
@@ -29,7 +29,7 @@ export const SideBarCart = ({ setShowCart }) => {
                     </div>
 
                     <div className="total-container">
-                        <b>Total:</b> R$: {valueCart}
+                        <b>Total:</b> R$: {getCartSubTotal()}
                     </div>
 
                     <Link to="/products/checkout" className="btn-icon">
