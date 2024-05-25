@@ -40,7 +40,7 @@ export const ProductList = () => {
                         
                             }
 
-                            <button className="btn-icon add-to-cart-btn" onClick={() => addToCart(product)}>
+                            <button className="btn-icon add-to-cart-btn" onClick={() => addToCart(product, product.id)}>
                                 <span>Adicionar ao Carrinho</span>
                                 <FaCartShopping />
                             </button>

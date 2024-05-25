@@ -8,7 +8,7 @@ import { NavBar } from '../navbar/NavBar'
 
 export const CheckOut = () => {
 
-    const { cart, removeFromCart, formatCurrency, handleInput, getCartSubTotal } = useContext(ProductContext)
+    const { cart, removeFromCart, formatCurrency, handleInput, getCartSubTotal, geradorPdf } = useContext(ProductContext)
 
     return (
         <>
@@ -50,7 +50,7 @@ export const CheckOut = () => {
                             <p>Valor total: {formatCurrency(getCartSubTotal())}</p>
                             <div className="content-buttons">
                                 <button>Enviar no Whatsapp</button>
-                                <button>Enviar no E-mail</button>
+                                <button onClick={() => geradorPdf()}>Enviar no E-mail</button>
                                 <button>Desistir da compra</button>
                             </div>
                         </div>}

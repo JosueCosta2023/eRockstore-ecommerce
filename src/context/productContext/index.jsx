@@ -1,3 +1,4 @@
+import jsPDF from "jspdf";
 import { createContext, useEffect, useState } from "react";
 
 
@@ -56,7 +57,20 @@ export const ProductProvider = ({children}) => {
   }, [])
 
     const addToCart = (product) => {
-        setCart([...cart, {...product, quantity: 1}])
+
+      setCart(prevCart => {
+        const produtoExistente = prevCart.find(item => item.id === product.id);
+
+        if(produtoExistente){
+          return prevCart.map(item => 
+            item.id === product.id ? {...item, quantity: item.quantity + 1} : item
+          )
+        } else {
+          return [...prevCart, {...product, quantity: 1}]
+        }
+      })
+
+
     }
 
 
@@ -90,9 +104,20 @@ export const ProductProvider = ({children}) => {
       ))
     }
 
+    const geradorPdf = () => {
+        const documento = new jsPDF()
+
+        documento.text(`<h1>Seu Pedido:</h1>`, 10, 10);
+        cart.forEach((product, index) => {
+          documento.text(`${index + 1}.${product.name} - Quantidade: ${product.quantity} - Preço: R$ ${product.price}`, 10, 20  + (index * 10))
+        })
+        documento.text(`Total: R$ ${getCartSubTotal().toFixed(2)}`, 10, 20 + (cart.length * 10))
+        documento.save("meuPedido.pdf")
+    }
+
 
     return(
-        <ProductContext.Provider value={{products, cart, valueCart, addToCart, removeFromCart, handleCheckout, formatCurrency, updateQuantity, getCartSubTotal, handleInput}}>
+        <ProductContext.Provider value={{products, geradorPdf, cart, valueCart, addToCart, removeFromCart, handleCheckout, formatCurrency, updateQuantity, getCartSubTotal, handleInput}}>
             {children}
         </ProductContext.Provider>
     )
