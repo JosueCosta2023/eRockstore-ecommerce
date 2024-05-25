@@ -11,7 +11,6 @@ export const Exclusive = () => {
                         <h2>SmatWatch Xiaomi</h2>
                         <p>
 
-                            Descrição do Produto: Smartwatch Xiaomi
                             O smartwatch Xiaomi é um dispositivo vestível elegante e funcional, projetado para atender às necessidades dos usuários modernos. Equipado com uma tela AMOLED de alta resolução, oferece visualizações nítidas e vibrantes, mesmo sob luz solar intensa. Sua bateria de longa duração pode chegar a até duas semanas de uso com uma única carga, garantindo que você fique conectado sem interrupções.
                         </p>
                         <Link to="/products/:id/details" className="see-more-details">

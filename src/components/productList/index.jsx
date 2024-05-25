@@ -10,7 +10,7 @@ import { ProductContext } from "../../context/productContext"
 
 export const ProductList = () => {
 
-    const {products,  addToCart, cart} = useContext(ProductContext)
+    const {products,  addToCart, cart, formatCurrency} = useContext(ProductContext)
 
 
     return (
@@ -24,11 +24,13 @@ export const ProductList = () => {
             <div className="product-list">
                 {products && products.map((product) => (
                     <div key={product.id} className="product">
+                        
                         <img src={product.image} alt={product.name} />
                         <p className="name">{product.name}</p>
                         <p className="rate">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</p>
-                        <p className="price"><span>R$:</span> {product.price}  </p>
+                        <p className="price"><span></span> {formatCurrency(product.price)}  </p>
 
+                        <i>Imagens Meramente Ilustrativas</i>
                         <div className="buttons">
                             { cart.length === 0 ? <></> : 
                                 <button className="btn-icon">
@@ -45,6 +47,7 @@ export const ProductList = () => {
                                 <FaCartShopping />
                             </button>
                         </div>
+                       
                     </div>
                 ))}
             </div>

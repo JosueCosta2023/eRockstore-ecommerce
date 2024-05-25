@@ -1,14 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Footer } from "../footer";
 import { EmptyCart } from "../pageMessages";
 import { ProductContext } from "../../context/productContext";
-import { FaXmark } from "react-icons/fa6";
+import { FaFilePdf, FaXmark } from "react-icons/fa6";
 import './checkout.css'
 import { NavBar } from '../navbar/NavBar'
+import { Link } from "react-router-dom";
+import { FaTrash, FaWhatsapp } from "react-icons/fa";
 
 export const CheckOut = () => {
 
-    const { cart, removeFromCart, formatCurrency, handleInput, getCartSubTotal, geradorPdf } = useContext(ProductContext)
+    const { cart, removeFromCart, formatCurrency, handleInput, getCartSubTotal, geradorPdf, clearCart } = useContext(ProductContext)
+    const [safe, setSafe] = useState()
 
     return (
         <>
@@ -28,6 +31,7 @@ export const CheckOut = () => {
 
                                             <div className="details">
                                                 <h4>{product.name}</h4>
+                                                <span>Soma: {product.price * product.quantity}</span>
                                                 <p>{formatCurrency(product.price)}</p>
                                                 <input
                                                     type="number"
@@ -36,6 +40,8 @@ export const CheckOut = () => {
                                                     value={product.quantity}
                                                     onChange={(e) => handleInput(product.id, e.target.value)}
                                                 />
+
+                                               
                                             </div>
                                         </div>
 
@@ -49,9 +55,21 @@ export const CheckOut = () => {
 
                             <p>Valor total: {formatCurrency(getCartSubTotal())}</p>
                             <div className="content-buttons">
-                                <button>Enviar no Whatsapp</button>
-                                <button onClick={() => geradorPdf()}>Enviar no E-mail</button>
-                                <button>Desistir da compra</button>
+                                <button className="btn-checkout">
+                                    Enviar no Whatsapp 
+                                    <FaWhatsapp/> 
+                                </button>
+
+
+                                <button className="btn-checkout" onClick={() => geradorPdf({cart})}>
+                                    Gerar PDF 
+                                    <FaFilePdf/> 
+                                </button>
+
+                                <Link className="btn-checkout" onClick={() => clearCart({cart})} to='/'>
+                                    <span>Zerar Carrinho</span>
+                                    <FaTrash/>
+                                </Link>
                             </div>
                         </div>}
                 </div>

@@ -31,10 +31,21 @@
     margin-top: 10px;
 }
 
-.page-inner-container > .content > div > .content-buttons > button{
+.page-inner-container > .content > div > .content-buttons > .btn-checkout{
     padding: 1rem 2rem;
     background-color: var(--primary-color);
     border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    display: block;
+    font-size: .9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.page-inner-container > .content > div > .content-buttons > .btn-checkout > svg{
+    font-size: 1.2rem;
 }
 
 

@@ -44,6 +44,16 @@
     font-size: 0.9rem;
 }
 
+.product > img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product > i{
+    font-size: 0.5rem;
+}
+
 .product .price{
     margin-top: 0.4rem;
 }
