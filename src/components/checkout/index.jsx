@@ -31,7 +31,7 @@ export const CheckOut = () => {
 
                                             <div className="details">
                                                 <h4>{product.name}</h4>
-                                                <span>Soma: {product.price * product.quantity}</span>
+                                                <span>Soma: {formatCurrency(product.price * product.quantity)}</span>
                                                 <p>{formatCurrency(product.price)}</p>
                                                 <input
                                                     type="number"

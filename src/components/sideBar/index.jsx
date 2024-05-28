@@ -1,9 +1,10 @@
-import { FaMoneyBill, FaXmark } from "react-icons/fa6"
+import {  FaXmark } from "react-icons/fa6"
 import './sidebar.css'
 import { Link } from "react-router-dom"
 import { SideBarProducts } from "../sideBarProduct"
 import { useContext } from "react"
 import { ProductContext } from "../../context/productContext"
+import { FaPlane } from "react-icons/fa"
 
 
 
@@ -34,7 +35,7 @@ export const SideBarCart = ({ setShowCart }) => {
 
                     <Link to="/products/checkout" className="btn-icon">
                         <span>Enviar Pedido</span>
-                        <FaMoneyBill/>
+                        <FaPlane/>
                     </Link>
                 </>
             }
