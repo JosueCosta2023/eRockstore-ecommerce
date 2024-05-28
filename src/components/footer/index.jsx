@@ -31,10 +31,10 @@ export const Footer = () => {
                 <div className="links">
                     <h3>Links Uteis</h3>
                     <ul>
-                        <li><Link to="/">Cupons</Link></li>
-                        <li><Link to="/">Blogs</Link></li>
+                        <li><Link to="/about">Nossa Hitória</Link></li>
                         <li><Link to="/roles">Tone-se Parceiro</Link></li>
                         <li><Link to="/">Politicas e privacidade</Link></li>
+                        <li><Link to="/">Trabalhe Conosco</Link></li>
                     </ul>
                 </div>
             </div>

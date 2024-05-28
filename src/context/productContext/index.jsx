@@ -168,7 +168,7 @@ export const ProductProvider = ({ children }) => {
     documento.text(`Total: ${formatCurrency(getCartSubTotal())}`, 20, documento.autoTable.previous.finalY + 10);
 
     // Adicionar observações ou termos
-    const terms = "Este orçamento é válido por 30 dias.\nPagamento deve ser efetuado até a data de vencimento.";
+    const terms = "Este orçamento é válido por 30 dias.\nApós o vencimento os preços podem sofrer alterações.";
     documento.text(terms, 20, documento.autoTable.previous.finalY + 30);
 
     // Salvar PDF

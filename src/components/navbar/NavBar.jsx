@@ -29,7 +29,7 @@ export const NavBar = () => {
               <Link to="/products">Produtos</Link>
             </li>
             <li>
-              <Link to="/about">Sobre</Link>
+              <Link to="/about">Sobre nós</Link>
             </li>
             <li>
               <Link to="/contact">Contato</Link>
