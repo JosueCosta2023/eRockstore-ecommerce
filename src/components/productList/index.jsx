@@ -1,9 +1,9 @@
 import { useContext } from "react"
-import { FaMoneyBill } from "react-icons/fa"
 import { FaCartShopping } from "react-icons/fa6"
 import { Link } from "react-router-dom"
 import './product.css'
 import { ProductContext } from "../../context/productContext"
+import { BsSendPlus } from "react-icons/bs"
 
 
 
@@ -36,7 +36,7 @@ export const ProductList = () => {
                                 <button className="btn-icon">
                                     <Link to={`/products/checkout`}>
                                         <span>Enviar Pedido</span>
-                                        <FaMoneyBill />
+                                        <BsSendPlus/>
                                     </Link>
                                 </button>
                         

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import { SideBarProducts } from "../sideBarProduct"
 import { useContext } from "react"
 import { ProductContext } from "../../context/productContext"
-import { FaPlane } from "react-icons/fa"
+import { BsSendPlus } from "react-icons/bs"
 
 
 
@@ -35,7 +35,7 @@ export const SideBarCart = ({ setShowCart }) => {
 
                     <Link to="/products/checkout" className="btn-icon">
                         <span>Enviar Pedido</span>
-                        <FaPlane/>
+                        <BsSendPlus/>
                     </Link>
                 </>
             }
