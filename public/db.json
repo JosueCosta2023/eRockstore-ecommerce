@@ -84,6 +84,27 @@
       "image": "/images/products/product-12.png",
       "rating": 5,
       "price": 6500
+    },
+    {
+      "id": 13,
+      "name": "The Last Of Us Part II ",
+      "image": "/images/products/product-13.png",
+      "rating": 5,
+      "price": 98
+    },
+    {
+      "id": 14,
+      "name": "Elden Ring Full Edition",
+      "image": "/images/products/product-14.png",
+      "rating": 5,
+      "price": 320.73
+    },
+    {
+      "id": 15,
+      "name": "Resident Evil 4 - Remake",
+      "image": "/images/products/product-15.png",
+      "rating": 5,
+      "price": 45
     }
   ]
 }
