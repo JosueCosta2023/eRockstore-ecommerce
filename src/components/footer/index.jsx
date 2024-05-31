@@ -34,7 +34,6 @@ export const Footer = () => {
                         <li><Link to="/about">Nossa Hitória</Link></li>
                         <li><Link to="/roles">Tone-se Parceiro</Link></li>
                         <li><Link to="/">Politicas e privacidade</Link></li>
-                        <li><Link to="/">Trabalhe Conosco</Link></li>
                     </ul>
                 </div>
             </div>
