@@ -1,25 +1,58 @@
- import { BiSend } from 'react-icons/bi'
+import { BiSend } from 'react-icons/bi'
 import './contact.css'
+import { useForm } from 'react-hook-form'
 
 export const ContactForm = () => {
+
+    const {register, handleSubmit,reset, formState: {errors}} = useForm()
+
+    const OnClick = (data) => {
+        console.log(data)
+        reset()
+    }
+
     return(
         <section className='inner-container-contact'>
             <div className='content-contact'>
+
                 <form action="" className='form'>
                     <div className='input-groups'>
                         <div className='input-item'>
-                            <span className='alert'>Campo Obrigatorio</span>
-                            <input className='inputs' type="text" placeholder='Nome Completo' />
+                            {errors.nome && <i>{errors.nome.message}</i>}
+                            <input 
+                                className='inputs' 
+                                type="text" 
+                                placeholder='Nome Completo'
+                                id='nome'
+                                {
+                                    ...register('nome', {required: 'Campo obrigatorio'})
+                                } />
                         </div>
                         <div className='input-item'>
-                            <span className='alert'>Campo Obrigatorio</span>
-                            <input className='inputs' type="email" placeholder='E-Mail' />
+                            {errors.email && <i>{errors.email.message}</i>}
+                            <input 
+                                className='inputs' 
+                                type="email" 
+                                id='email'
+                                placeholder='E-Mail' 
+                                {
+                                    ...register('email', {required: 'Campo obrigatorio'})
+                                }/>
                         </div>
 
                         <div className='input-items-group'>
                             <div className='input-item'>
-                                <span className='alert'>Campo Obrigatorio</span>
-                                <input className='inputs' type="number" placeholder='Telefone' />
+                                
+                                {errors.phone && <i>{errors.phone.message}</i>}
+                                <input 
+                                    className='inputs' 
+                                    type="number" 
+                                    placeholder='Telefone'
+                                    id='phone' 
+                                    {
+                                        ...register('phone', {required: 'Campo obrigatorio'})
+                                    }
+                                    />
                             </div>
 
                             <select name='departamento'>
@@ -32,18 +65,33 @@ export const ContactForm = () => {
                         </div>
 
                         <div className='input-item'>
-                            <span className='alert'>Campo Obrigatorio</span>
-                            <input className='inputs' type="text" placeholder='Assunto' />
+                            {errors.subject && <i>{errors.subject.message}</i>}  
+                            <input 
+                                className='inputs' 
+                                type="text" 
+                                placeholder='Assunto'
+                                id='subject'
+                                {
+                                    ...register('subject', {required: 'Campo obrigatorio'})
+                                }
+                                 />
                         </div>
 
                         <div className='input-item'>
-                            <span className='alert'>Campo Obrigatorio</span>
-                            <textarea className='inputs' type="text" placeholder='Mensagem' />
+                            {errors.message && <i>{errors.message.message}</i>}
+                            <textarea 
+                                className='inputs' 
+                                type="text" 
+                                placeholder='Mensagem'
+                                id='message' 
+                                {
+                                    ...register('message', {required: 'Campo obrigatorio'})
+                                }/>
                         </div>
                     </div>
 
                     <div className='btn-group'>
-                        <button className='send-btn'>
+                        <button type='submit' className='send-btn' onClick={handleSubmit(OnClick)}>
                             <span>Enviar</span>
                             <BiSend/>
                         </button>

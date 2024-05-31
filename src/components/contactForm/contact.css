@@ -54,8 +54,8 @@
     height: 40px;
 }
 
-.form .input-groups .input-item .alert{
-    display: none;
+.form .input-groups .input-item > i{
+    display: block;
     position: absolute;
     right: 0;
     top: 0;
