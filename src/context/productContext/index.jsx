@@ -1,6 +1,9 @@
 import jsPDF from "jspdf";
 import { createContext, useEffect, useState } from "react";
 import 'jspdf-autotable';
+import { useNavigate } from "react-router-dom";
+
+
 
 
 export const ProductContext = createContext();
@@ -11,6 +14,8 @@ export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([])
   const [cart, setCart] = useState([])
   const [valueCart, setValueCart] = useState([])
+  const [search, setSearch] = useState('')
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
         fetch('/db.json')
@@ -18,6 +23,20 @@ export const ProductProvider = ({ children }) => {
           .then(data => setProducts(data.products))
 
   }, [])
+
+  useEffect(() => {
+    setFilteredProducts(
+      products.filter((product) => product.name.toLowerCase().includes(search.toLocaleLowerCase()))
+    )
+
+    
+  }, [search, products])
+
+  console.log(filteredProducts);
+
+  const handleSearchChange = (event) => {
+    setSearch(event.target.value)
+  }
 
   const addToCart = (product) => {
 
@@ -159,7 +178,10 @@ export const ProductProvider = ({ children }) => {
       getCartSubTotal, 
       handleInput, 
       clearCart, 
-      setProducts
+      setProducts,
+      search,
+      handleSearchChange,
+      filteredProducts
        }}>
 
       {children}

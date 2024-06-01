@@ -10,7 +10,7 @@ import { BsSendPlus } from "react-icons/bs"
 
 export const ProductList = () => {
 
-    const {products,  addToCart, cart, formatCurrency} = useContext(ProductContext)
+    const {products,  addToCart, cart, formatCurrency, filteredProducts} = useContext(ProductContext)
 
     return (
         <div className="page-inner-content">
@@ -21,7 +21,8 @@ export const ProductList = () => {
 
 
             <div className="product-list">
-                {products && products.map((product) => (
+                { filteredProducts !== '' ? 
+                filteredProducts && filteredProducts.map((product) => (
                     <div key={product.id} className="product">
                         
                         <img src={product.image} alt={product.name} />
@@ -48,6 +49,36 @@ export const ProductList = () => {
                         </div>
                        
                     </div>
+            
+                )) : 
+                products && products.map((product) => (
+                    <div key={product.id} className="product">
+                        
+                        <img src={product.image} alt={product.name} />
+                        <p className="name">{product.name}</p>
+                        <p className="rate">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</p>
+                        <p className="price"><span></span> {formatCurrency(product.price)}  </p>
+
+                        <i>Imagens Meramente Ilustrativas</i>
+                        <div className="buttons">
+                            { cart.length === 0 ? <></> : 
+                                <button className="btn-icon">
+                                    <Link to={`/products/checkout`}>
+                                        <span>Enviar Pedido</span>
+                                        <BsSendPlus/>
+                                    </Link>
+                                </button>
+                        
+                            }
+
+                            <button className="btn-icon add-to-cart-btn" onClick={() => addToCart(product, product.id)}>
+                                <span>Adicionar ao Carrinho</span>
+                                <FaCartShopping />
+                            </button>
+                        </div>
+                    
+                    </div>
+                
                 ))}
             </div>
         </div>

@@ -10,7 +10,7 @@ export const NavBar = () => {
 
   const [show, setShow] = useState(false)
   const [showCart, setShowCart] = useState(false)
-  const {cart } = useContext(ProductContext)
+  const {cart, search, handleSearchChange } = useContext(ProductContext)
 
   
   return (
@@ -43,8 +43,8 @@ export const NavBar = () => {
               <input 
                 type="search" 
                 placeholder="Digite o nome do produto..." 
-                value={''}
-                onChange={''}/>
+                value={search}
+                onChange={handleSearchChange}/>
             </div>
 
 
