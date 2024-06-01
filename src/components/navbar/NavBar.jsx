@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { FaBars, FaSearch, FaShoppingCart } from "react-icons/fa";
+import { FaBars, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import { SideBarCart } from "../sideBar";
@@ -10,9 +10,9 @@ export const NavBar = () => {
 
   const [show, setShow] = useState(false)
   const [showCart, setShowCart] = useState(false)
-  const {cart} = useContext(ProductContext)
-  
+  const {cart } = useContext(ProductContext)
 
+  
   return (
     <div className="nav-container">
       <div className="inner-content">
@@ -38,10 +38,16 @@ export const NavBar = () => {
         </nav>
 
         <div className="navs-icon-container">
+
             <div className="search-input-container">
-              <input type="search" placeholder="Procurar" />
-              <FaSearch />
+              <input 
+                type="search" 
+                placeholder="Digite o nome do produto..." 
+                value={''}
+                onChange={''}/>
             </div>
+
+
             <button className="shopping-cart" 
             onClick={() => setShowCart(!showCart)}>
               <FaShoppingCart/>

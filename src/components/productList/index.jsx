@@ -12,7 +12,6 @@ export const ProductList = () => {
 
     const {products,  addToCart, cart, formatCurrency} = useContext(ProductContext)
 
-
     return (
         <div className="page-inner-content">
             <div className="section-title">

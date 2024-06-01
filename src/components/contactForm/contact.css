@@ -84,7 +84,8 @@
     width: 100%;
     margin-top: 15px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .form .btn-group .send-btn{
@@ -119,4 +120,7 @@
     .form .input-groups .input-items-group{
         flex-direction: column;
     } 
+    .form .btn-group .logo{
+       display: none;
+    }
 }

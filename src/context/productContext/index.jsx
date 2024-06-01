@@ -13,14 +13,9 @@ export const ProductProvider = ({ children }) => {
   const [valueCart, setValueCart] = useState([])
 
   useEffect(() => {
-    try {
-      fetch('/db.json')
-        .then((res) => res.json())
-        .then(data => setProducts(data.products))
-
-    } catch (error) {
-      console.error("Erro ao buscar dados json", error)
-    }
+        fetch('/db.json')
+          .then((res) => res.json())
+          .then(data => setProducts(data.products))
 
   }, [])
 
@@ -41,7 +36,6 @@ export const ProductProvider = ({ children }) => {
 
   }
 
-
   const getCartSubTotal = () => {
     return cart.reduce((total, product) => total + product.price * product.quantity, 0)
   }
@@ -51,7 +45,6 @@ export const ProductProvider = ({ children }) => {
   }
 
   const handleCheckout = () => {
-    alert("Compra Finalizada")
     setCart([])
   }
 
@@ -61,6 +54,7 @@ export const ProductProvider = ({ children }) => {
     }
     updateQuantity(productId, parseInt(quantity, 10))
   }
+
 
   const formatCurrency = (price) => {
     return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(price.toFixed(2))
@@ -150,10 +144,26 @@ export const ProductProvider = ({ children }) => {
     setCart([])
   }
 
-
   return (
-    <ProductContext.Provider value={{ products, geradorPdf, cart, valueCart, addToCart, removeFromCart, handleCheckout, formatCurrency, updateQuantity, getCartSubTotal, handleInput, clearCart }}>
+    <ProductContext.Provider 
+    value={{ 
+      products, 
+      geradorPdf, 
+      cart, 
+      valueCart, 
+      addToCart, 
+      removeFromCart, 
+      handleCheckout, 
+      formatCurrency, 
+      updateQuantity, 
+      getCartSubTotal, 
+      handleInput, 
+      clearCart, 
+      setProducts
+       }}>
+
       {children}
+
     </ProductContext.Provider>
   )
 

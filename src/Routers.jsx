@@ -6,6 +6,7 @@ import { Contact } from "./pages/contact"
 import { CheckOut } from "./components/checkout"
 import { ProductDetails } from "./components/productDetails"
 import { Roles } from "./components/roles"
+import { ScrollTop } from "./components/utils"
 
 
 
@@ -14,6 +15,7 @@ export const AppRouter = () => {
 
     return(
         <BrowserRouter>
+        <ScrollTop/>
             <Routes>           
                     <Route path="/" Component={Home}/>
                     <Route path="/products" Component={Products}/>

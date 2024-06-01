@@ -41,7 +41,7 @@ export const CheckOut = () => {
                                                     onChange={(e) => handleInput(product.id, e.target.value)}
                                                 />
 
-                                               
+
                                             </div>
                                         </div>
 
@@ -56,19 +56,19 @@ export const CheckOut = () => {
                             <p>Valor total: {formatCurrency(getCartSubTotal())}</p>
                             <div className="content-buttons">
                                 <button className="btn-checkout">
-                                    Enviar no Whatsapp 
-                                    <FaWhatsapp/> 
+                                    Enviar no Whatsapp
+                                    <FaWhatsapp />
                                 </button>
 
 
-                                <button className="btn-checkout" onClick={() => geradorPdf({cart})}>
-                                    Gerar PDF 
-                                    <FaFilePdf/> 
+                                <button className="btn-checkout" onClick={() => geradorPdf({ cart })}>
+                                    Gerar PDF
+                                    <FaFilePdf />
                                 </button>
 
-                                <Link className="btn-checkout" onClick={() => clearCart({cart})} to='/'>
+                                <Link className="btn-checkout" onClick={() => clearCart({ cart })} to='/'>
                                     <span>Zerar Carrinho</span>
-                                    <FaTrash/>
+                                    <FaTrash />
                                 </Link>
                             </div>
                         </div>}

@@ -95,6 +95,9 @@ export const ContactForm = () => {
                             <span>Enviar</span>
                             <BiSend/>
                         </button>
+                        <h1 className="logo">
+                            Rocket<span>Store</span>
+                        </h1>
                     </div> 
                 </form>
             </div>
