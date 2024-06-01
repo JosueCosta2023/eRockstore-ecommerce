@@ -32,7 +32,6 @@ export const ProductProvider = ({ children }) => {
     
   }, [search, products])
 
-  console.log(filteredProducts);
 
   const handleSearchChange = (event) => {
     setSearch(event.target.value)

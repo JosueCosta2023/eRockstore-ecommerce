@@ -4,107 +4,98 @@
       "id": 1,
       "name": "Combo Gamer Meetion",
       "image": "/images/products/product-1.png",
+      "imageSlider":"",
       "rating": 4,
       "price": 350,
-      "description":""
+      "description":"Prepare-se para elevar sua experiência de jogo a um novo patamar com o Combo Gamer Meetion. Projetado para atender às necessidades dos jogadores mais exigentes, este conjunto de acessórios oferece uma combinação perfeita de desempenho, conforto e estilo."
     },
     {
       "id": 2,
       "name": "Msi GeFore Gtx 1650",
       "image": "/images/products/product-2.png",
       "rating": 5,
-      "price": 750
+      "price": 750,
+      "description":"A MSI GeForce GTX 1650 oferece uma experiência de jogo excepcional em um pacote compacto e eficiente. Projetada para proporcionar desempenho potente e eficiente em energia, esta placa gráfica é uma escolha ideal para jogadores que buscam uma atualização confiável para o seu sistema."
     },
     {
       "id": 3,
       "name": "Dualsense PS5",
       "image": "/images/products/product-3.png",
       "rating": 5,
-      "price": 152
+      "price": 152,
+      "description":"O controle DualSense para PlayStation 5 (PS5) redefine a experiência de jogo, oferecendo uma combinação de tecnologia avançada, design inovador e funcionalidades imersivas. Projetado para proporcionar uma sensação de conexão mais profunda com os jogos, o DualSense eleva o nível de envolvimento e imersão dos jogadores a novos patamares."
     },
     {
       "id": 4,
       "name": "Cadeira Gamer Frizzi",
       "image": "/images/products/product-4.png",
       "rating": 3,
-      "price": 1500
+      "price": 1500,
+      "description":"A cadeira gamer Frizzi é o equipamento perfeito para jogadores que buscam o máximo conforto e suporte durante suas maratonas de jogos. Projetada com um foco especial na ergonomia e no design contemporâneo, a Frizzi oferece uma experiência de jogo premium que combina estilo e funcionalidade."
     },
     {
       "id": 5,
       "name": "iPhone 14 Pro Max 512GB",
       "image": "/images/products/product-5.png",
       "rating": 5,
-      "price": 7000
+      "price": 7000,
+      "description":"O iPhone 14 Pro Max 512GB representa a excelência em tecnologia e design da Apple, oferecendo uma experiência de smartphone incomparável para os entusiastas da marca. Com uma combinação de recursos de ponta, desempenho poderoso e um design deslumbrante, este dispositivo redefine os limites do que um smartphone pode alcançar."
     },
     {
       "id": 6,
       "name": "Samsung Galaxy S23 Ultra 1TB",
       "image": "/images/products/product-6.png",
       "rating": 5,
-      "price": 2800
+      "price": 2800,
+      "description":"O Samsung Galaxy S23 Ultra 1TB representa o que há de mais avançado em smartphones, combinando tecnologia de ponta, desempenho excepcional e um design impressionante. Desenvolvido para oferecer uma experiência premium aos usuários mais exigentes, este dispositivo redefine os padrões de excelência no mundo dos smartphones."
     },
     {
       "id": 7,
       "name": "Asus Rog Phone 3 Gamer",
       "image": "/images/products/product-7.png",
       "rating": 4,
-      "price": 999
+      "price": 999,
+      "description":"O Asus ROG Phone 3 Gamer é o dispositivo definitivo para jogadores apaixonados que buscam uma experiência de jogo imersiva e de alto desempenho. Projetado especificamente para atender às necessidades dos jogadores mais exigentes, este smartphone combina potência bruta, recursos de ponta e um design impressionante para oferecer uma experiência de jogo incomparável."
     },
     {
       "id": 8,
       "name": "Xiaomi 13 Ultra",
       "image": "/images/products/product-8.png",
       "rating": 4,
-      "price": 1300
+      "price": 1300,
+      "description":"O Xiaomi 13 Ultra é uma obra-prima da engenharia e design, combinando elegância, desempenho de alto nível e inovação em um único dispositivo. Projetado para os consumidores mais exigentes, este smartphone oferece uma experiência premium em todos os aspectos, desde o design até o desempenho."
     },
     {
       "id": 9,
       "name": "Xbox Series X",
       "image": "/images/products/product-9.png",
       "rating": 5,
-      "price": 3500
+      "price": 3500,
+      "description":"O Xbox Series X é o ápice da inovação da Microsoft em jogos de console, oferecendo uma experiência de jogo imersiva e de alto desempenho que redefine os padrões da indústria. Projetado para oferecer potência, velocidade e compatibilidade, este console representa a próxima geração de entretenimento digital para jogadores de todos os níveis de habilidade."
     },
     {
       "id": 10,
       "name": "Racingwheel GT480 Ferrari",
       "image": "/images/products/product-10.png",
       "rating": 5,
-      "price": 600
+      "price": 600,
+      "description":"O Racingwheel GT480 Ferrari é o sonho de todo entusiasta de corridas, projetado para oferecer uma experiência de direção imersiva e autêntica que rivaliza com os melhores carros de corrida do mundo. Desenvolvido em parceria com a lendária fabricante de automóveis Ferrari, este volante é uma fusão perfeita de tecnologia de ponta e design elegante, projetado para elevar sua experiência de jogo a novos patamares."
     },
     {
       "id": 11,
       "name": "PlayStation 5",
       "image": "/images/products/product-11.png",
       "rating": 5,
-      "price": 5000
+      "price": 5000,
+      "description":"O PlayStation 5 é mais do que apenas um console de jogos - é o pináculo da engenharia e inovação da Sony, oferecendo uma experiência de jogo imersiva e de última geração que redefine os padrões da indústria. Projetado para oferecer desempenho excepcional, gráficos de alta qualidade e uma biblioteca de jogos incomparável, o PS5 é o centro do entretenimento digital em sua casa."
     },
     {
       "id": 12,
       "name": "Gaming Desktop RTX 3090Ti",
       "image": "/images/products/product-12.png",
       "rating": 5,
-      "price": 6500
-    },
-    {
-      "id": 13,
-      "name": "The Last Of Us Part II ",
-      "image": "/images/products/product-13.png",
-      "rating": 5,
-      "price": 98
-    },
-    {
-      "id": 14,
-      "name": "Elden Ring Full Edition",
-      "image": "/images/products/product-14.png",
-      "rating": 5,
-      "price": 320.73
-    },
-    {
-      "id": 15,
-      "name": "Resident Evil 4 - Remake",
-      "image": "/images/products/product-15.png",
-      "rating": 5,
-      "price": 45
+      "price": 6500,
+      "description":"O Gaming Desktop RTX 3090Ti é o epítome da potência e desempenho em jogos, projetado para oferecer uma experiência de jogo incomparável para os entusiastas mais exigentes. Equipado com o poderoso processador, uma placa de vídeo RTX 3090Ti de última geração e uma série de recursos de ponta, este desktop oferece um desempenho que rivaliza com os melhores sistemas de jogos disponíveis no mercado."
     }
   ]
 }

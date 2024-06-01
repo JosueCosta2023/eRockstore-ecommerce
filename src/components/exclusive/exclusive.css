@@ -1,21 +1,27 @@
 .exclusive-section{
-    background-color: var(--secondary-color);
+    background: var(--secondary-color); 
+    background: linear-gradient(351deg, var(--secondary-color) 0%, var(--primary-color) 100%);
 }
 
 .exclusive-section .content{
     display: flex;
     align-items: center;
+    justify-content: space-around;
     color: white;
     flex-direction: row-reverse;
     padding: 5rem 1rem;
+    gap: 2rem;
 }
 
 .exclusive-section .content .left-side{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     letter-spacing: 2px;
+}
 
+.exclusive-section .content .left-side > p{
+    max-width: 450px;
 }
 .exclusive-section .content .right-side img{
     max-width: 500px;
